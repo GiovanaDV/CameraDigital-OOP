@@ -1,16 +1,10 @@
 package br.com.fiapride.model;
 
 public class CameraDigital {
-	public String marca;
-	public String nomeModelo;
-	public double memoria;
-	
-	public CameraDigital (String marca, String nomeModelo){
-		this.marca = marca;
-		this.nomeModelo = nomeModelo;
-		this.memoria = 0.0; 
-	}
-	
+	private String marca;
+	private String nomeModelo;
+	private double memoria;
+
 	public void tirarFoto(double foto) {
 		if (foto == 0) {
 			System.out.println("Tecle 1 para tirar foto!");
@@ -33,6 +27,40 @@ public class CameraDigital {
 			System.out.println("Vídeo gravado com sucesso! Sua memoria é: " + this.memoria);
 		}
 	}
+	
+	public CameraDigital(String marca, String nomeModelo, double memoria) {
+		this.setMarca(marca);
+		this.setNomeModelo(nomeModelo);
+		this.setMemoria(0); //Todo mundo comeca com 0
+	}
+	
+	public String getMarca() {
+		return this.marca;
+	}
+	
+	private void setMarca(String marca) {
+		this.marca = marca;
+	}
+	
+	public String getNomeModelo() {
+		return this.nomeModelo;
+	}
+	
+	private void setNomeModelo(String nomeModelo) {
+		this.nomeModelo = nomeModelo;
+	}
+	
+	public double getMemoria() {
+		return this.memoria;
+	}
+	
+	private void setMemoria(double memoria) {
+		this.memoria = memoria;
+	}
+	
+	
+	
+	
 }
 
 
