@@ -16,8 +16,9 @@ public class TesteCameraDigitial {
 		System.out.println("Camera 1: " +camera1.getMarca() + "| Modelo: " + camera1.getNomeModelo() + "| Memoria: " + camera1.getMemoria());
 		System.out.println("Camera 2: " +camera2.getMarca() + "| Modelo: " + camera2.getNomeModelo() + "| Memoria: " + camera2.getMemoria());
 		
-		
-		
+		// Tentando hackear o sistema
+		camera1.memoria = 15;
+		// The field CameraDigital.memoria is not visible
 
 	}
 
