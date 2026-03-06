@@ -31,7 +31,7 @@ public class CameraDigital {
 	public CameraDigital(String marca, String nomeModelo, double memoria) {
 		this.setMarca(marca);
 		this.setNomeModelo(nomeModelo);
-		this.setMemoria(0); //Todo mundo comeca com 0
+		this.setMemoria(memoria); 
 	}
 	
 	public String getMarca() {
@@ -55,6 +55,11 @@ public class CameraDigital {
 	}
 	
 	private void setMemoria(double memoria) {
+		if (memoria < 0) {
+			System.out.println("Memória não pode ser negativa!");
+			return;
+		}
+		
 		this.memoria = memoria;
 	}
 	

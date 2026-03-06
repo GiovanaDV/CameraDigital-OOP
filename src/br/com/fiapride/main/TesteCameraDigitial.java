@@ -9,12 +9,14 @@ public class TesteCameraDigitial {
 		System.out.println("Tirando fotos na camera 1");
 		camera1.tirarFoto(1);
 			
-		CameraDigital camera2 = new CameraDigital("Sony", "Modelo 6.0", 0);
+		CameraDigital camera2 = new CameraDigital("Sony", "Modelo 6.0", 10);
 		System.out.println("Gravando video na camera 2");
-		camera2.gravarVideo(10);
+		camera2.gravarVideo(20);
 		
-		System.out.println("Camera: " +camera1.getMarca() + "| Modelo: " + camera1.getNomeModelo() + "| Memoria: " + camera1.getMemoria());
-	
+		System.out.println("Camera 1: " +camera1.getMarca() + "| Modelo: " + camera1.getNomeModelo() + "| Memoria: " + camera1.getMemoria());
+		System.out.println("Camera 2: " +camera2.getMarca() + "| Modelo: " + camera2.getNomeModelo() + "| Memoria: " + camera2.getMemoria());
+		
+		
 		
 
 	}
