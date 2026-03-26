@@ -6,13 +6,17 @@ public class CameraDigital {
 	private String marca;
 	private String modelo;
 	private double memoria;
+	
+	//Atributo de associação
+	private Lente lente;
 
 	//CONSTRUTOR
-	public CameraDigital(String marca, String modelo, double memoria) {
+	public CameraDigital(String marca, String modelo, double memoria, Lente lente) {
 		this.marca = marca;
 		this.modelo = modelo;
 		this.setMemoria(memoria);  //único que pode mudar (set privado)
-		System.out.println("Registro inicial - Marca: " + this.marca + " Modelo: " + this.modelo + " Memória: " + this.memoria);
+		this.lente = lente;
+		System.out.println("Registro inicial - Marca: " + this.marca + " Modelo: " + this.modelo + " Memória: " + this.memoria + "Lente" + this.lente);
 	}
 	
 	//GETTERS
@@ -26,6 +30,10 @@ public class CameraDigital {
 	
 	public double getMemoria() {
 		return this.memoria;
+	}
+	
+	public Lente getLente() {
+		return this.lente;
 	}
 	
 	// COMPORTAMENTO PÚBLICO
