@@ -7,7 +7,11 @@ public class CameraDigital {
 	private String modelo;
 	private double memoria;
 	
+<<<<<<< HEAD
 	//Atributo de Associação (classe Lente)
+=======
+	//Atributo de associação
+>>>>>>> d91453650b375488d2d7e5e8385783c7abeaed3e
 	private Lente lente;
 
 	//CONSTRUTOR
@@ -16,8 +20,12 @@ public class CameraDigital {
 		this.modelo = modelo;
 		this.setMemoria(memoria);  //único que pode mudar (set privado)
 		this.lente = lente;
+<<<<<<< HEAD
 		System.out.println("\n -- RESUMO DA CAMERA --");
 		System.out.println("Marca: " + this.marca + " Modelo: " + this.modelo + " Memória: " + this.memoria);
+=======
+		System.out.println("Registro inicial - Marca: " + this.marca + " Modelo: " + this.modelo + " Memória: " + this.memoria + "Lente" + this.lente);
+>>>>>>> d91453650b375488d2d7e5e8385783c7abeaed3e
 	}
 	
 	public void exibirResumo() {
