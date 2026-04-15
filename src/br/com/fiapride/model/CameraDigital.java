@@ -7,11 +7,7 @@ public class CameraDigital {
 	private String modelo;
 	private double memoria;
 	
-<<<<<<< HEAD
 	//Atributo de Associação (classe Lente)
-=======
-	//Atributo de associação
->>>>>>> d91453650b375488d2d7e5e8385783c7abeaed3e
 	private Lente lente;
 
 	//CONSTRUTOR
@@ -20,12 +16,9 @@ public class CameraDigital {
 		this.modelo = modelo;
 		this.setMemoria(memoria);  //único que pode mudar (set privado)
 		this.lente = lente;
-<<<<<<< HEAD
+
 		System.out.println("\n -- RESUMO DA CAMERA --");
 		System.out.println("Marca: " + this.marca + " Modelo: " + this.modelo + " Memória: " + this.memoria);
-=======
-		System.out.println("Registro inicial - Marca: " + this.marca + " Modelo: " + this.modelo + " Memória: " + this.memoria + "Lente" + this.lente);
->>>>>>> d91453650b375488d2d7e5e8385783c7abeaed3e
 	}
 	
 	public void exibirResumo() {
@@ -51,33 +44,9 @@ public class CameraDigital {
 		return this.lente;
 	}
 	
-	// COMPORTAMENTO PÚBLICO
-	// consumo de memoria
-	public void tirarFoto(double foto) {
-		if (foto == 0) {
-			System.out.println("Tecle 1 para tirar foto!");
-			return;
-		}
-		if (foto == 1) {
-			this.memoria += 5.0;
-			System.out.println("Foto tirada com sucesso! Sua memoria é: " + this.memoria);
-		}
-			
-		}
-	
-	public void gravarVideo(double tempo) {
-		if (tempo > 15.0) {
-			System.out.println("Vídeo maior que 15 minutos!");
-			return;
-		}
-		if (tempo < 15.0) {
-			this.memoria += 6.0;
-			System.out.println("Vídeo gravado com sucesso! Sua memoria é: " + this.memoria);
-		}
-	}
-	
+
 	//SETTERS (apenas memoria - unica que muda de valor)
-	private void setMemoria(double memoria) {
+	protected void setMemoria(double memoria) { // mudando de private para protected para assim os metodos gravarVideo e tirarFoto serem usados nas subclasses (faz mais sentido)
 		if (memoria < 0) {
 			System.out.println("Memória não pode ser negativa!");
 			return;
